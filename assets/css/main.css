@@ -1,0 +1,44 @@
+h1{
+  text-align: center;
+}
+.carrusel {
+  width: 540px;
+  margin: 40px auto;
+  overflow: auto;
+}
+.content-carrusel{
+  width: 500px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  padding: 3px
+  border:#666 solid 1px;
+}
+.img-carrusel {
+  display: none;
+  width: 500px;
+  height: 300px;
+}
+.active{
+  display: inline-block;
+}
+.before , .after{
+  float: left;
+  margin-top: 130px;
+  cursor: pointer;
+  font-size: 70px;
+}
+.before:hover,.after :hover{
+
+}
+.before{
+  position: relative;
+  margin-right: -45px;
+  z-index: 100;
+}
+.next{
+  position: relative;
+  margin-left: -45px;
+  z-index: 100;
+}
