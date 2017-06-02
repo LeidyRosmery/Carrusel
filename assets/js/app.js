@@ -13,7 +13,7 @@ $(document).ready(function() {
         if (imagenSiguiente.length) {
             imagenActual.removeClass('active').css('z-index', -10);
             imagenSiguiente.addClass('active').css('z-index', 10);
-            $('#slider img:last-child').insertBefore('#slider img:first-child');
+            $('#slider img:first-child').insertBefore('#slider img:last-child');
         }
     });
     $('.before').on('click', function() {
