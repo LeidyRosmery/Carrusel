@@ -29,6 +29,9 @@ h1{
   cursor: pointer;
   font-size: 70px;
 }
+#slider img:last-child{
+  background: yellow;
+}
 .after:hover , .before:hover{
  color:#333;
 }
