@@ -2,15 +2,18 @@ $(document).ready(function() {
   //funcion para cambiar imagen con controles de puntos
       $('.controles').on('click',function(e){
         var pos=e.target;
+        var imagenActual = $('.active');
         $('span').removeClass('color-activo');
         pos.classList.add('color-activo');
         img=$('.img-carrusel[alt='+pos.id+']');
-        img.addClass('active').css('z-index', 50);
+        img.addClass('active').css('z-index', 10);
+        imagenActual.removeClass('active').css('z-index', -10);
         console.log('span id'+ pos.id);
         console.log('alt imagen'+ img.attr('alt'));
       });
 
       $('.after').on('click', function() {
+      //  $('img').removeClass('active');
         $('span').removeClass('color-activo');
         var imagenActual = $('.active');
         var spanActual=$('#'+imagenActual.attr('alt'));
@@ -24,9 +27,11 @@ $(document).ready(function() {
             spanSiguiente.addClass('color-activo');
             $('#slider img:first-child').insertAfter('#slider img:last-child');
             console.log(imagenActual);
-            console.log(spanActual);
+            console.log(spanActual.attr("id"));
           }
-      //  if (spanActual.attr('id')==7) {
+       if (spanActual.attr('id')==7) {
+         $('.icon-controller-record[id=1]').addClass('color-activo');
+       }
     });
     $('.before').on('click', function() {
         var imagenActual = $('.active');
@@ -39,6 +44,9 @@ $(document).ready(function() {
             imagenActual.removeClass('active').css('z-index', -10);
             imagenAnterior.addClass('active').css('z-index', 10);
             $('#slider img:last-child').insertBefore('#slider img:first-child');
+        }
+        if (spanActual.attr('id')==1) {
+          $('.icon-controller-record[id=7]').addClass('color-activo');
         }
     });
 });
