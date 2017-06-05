@@ -6,6 +6,9 @@ h1{
   margin: 40px auto;
   overflow: auto;
 }
+.contenedor{
+  overflow: auto;
+}
 .content-carrusel{
   width: 500px;
   height: 300px;
@@ -29,9 +32,6 @@ h1{
   cursor: pointer;
   font-size: 70px;
 }
-#slider img:last-child{
-  background: yellow;
-}
 .after:hover , .before:hover{
  color:#333;
 }
@@ -44,4 +44,19 @@ h1{
   position: relative;
   margin-left: -45px;
   z-index: 100;
+}
+.icon-controller-record {
+    padding: 0 6px;
+}
+.color-activo{
+  color:#fff;
+}
+.controles {
+    display: flex;
+    justify-content: center;
+    top: -31px;
+    position: relative;
+}
+.controles:hover{
+  cursor: pointer;
 }
